@@ -70,10 +70,10 @@ public class lengthConverter extends javax.swing.JFrame {
 
         getContentPane().add(panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 60));
 
-        cbInput.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Kilometer", "Hektometer", "Dekameter", "Meter", "Desimeter", "Centimeter", "Milimeter", "Mile", "Feet", "Inch", " " }));
+        cbInput.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Kilometer", "Hektometer", "Dekameter", "Meter", "Desimeter", "Centimeter", "Milimeter", "Mile", "Feet", "Inch" }));
         getContentPane().add(cbInput, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 112, 92, 30));
 
-        cbOutput.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Kilometer", "Hektometer", "Dekameter", "Meter", "Desimeter", "Centimeter", "Milimeter", "Mile", "Feet", "Inch", " " }));
+        cbOutput.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Kilometer", "Hektometer", "Dekameter", "Meter", "Desimeter", "Centimeter", "Milimeter", "Mile", "Feet", "Inch" }));
         getContentPane().add(cbOutput, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 233, 92, 30));
 
         tfInput.addActionListener(new java.awt.event.ActionListener() {
