@@ -155,130 +155,800 @@ public class lengthConverter extends javax.swing.JFrame {
         String box1 = (String)cbInput.getSelectedItem();
         String box2 = (String)cbOutput.getSelectedItem();
         
-        // dari celcius
-        if(box1.equals("Celcius") && box2.equals("Fahrenheit")){
-            double c = Double.parseDouble(tfInput.getText());
-            
-            double k = (double)(c * 1.8 + 32);
-            
-            tfOutput.setText(String.valueOf(k));
-        }
-        
-        if(box1.equals("Celcius") && box2.equals("Kelvin")){
-            double c = Double.parseDouble(tfInput.getText());
-            
-            double f = (double)(c + 273);
-            
-            tfOutput.setText(String.valueOf(f));
-        }
-        
-        if(box1.equals("Celcius") && box2.equals("Reamur")){
-            double c = Double.parseDouble(tfInput.getText());
-            
-            double r = (double)(0.8 * c);
-            
-            tfOutput.setText(String.valueOf(r));
-        }
-       
-        if(box1.equals("Celcius") && box2.equals("Celcius")){
-            double c = Double.parseDouble(tfInput.getText());
-            
-            tfOutput.setText(String.valueOf(c));
-        }
-        
-        // dari fahrenheit
-        if(box1.equals("Fahrenheit") && box2.equals("Celcius")){
-            double f = Double.parseDouble(tfInput.getText());
-            
-            double c = (double)((f - 32)* 0.56);
-            
-            tfOutput.setText(String.valueOf(c));
-        }
-        
-        if(box1.equals("Fahrenheit") && box2.equals("Kelvin")){
-            double f = Double.parseDouble(tfInput.getText());
-            
-            double k = (double)((f - 32)* 0.56 + 273);
-            
-            tfOutput.setText(String.valueOf(k));
-        }
-        
-        if(box1.equals("Fahrenheit") && box2.equals("Reamur")){
-            double f = Double.parseDouble(tfInput.getText());
-            
-            double r = (double)((f - 32) * (0.44));
-            
-            tfOutput.setText(String.valueOf(r));
-        }
-        
-        if(box1.equals("Fahrenheit") && box2.equals("Fahrenheit")){
-            double f = Double.parseDouble(tfInput.getText());
-            
-            tfOutput.setText(String.valueOf(f));
-        }
-        
-        // dari kelvin 
-        if(box1.equals("Kelvin") && box2.equals("Celcius")){
-            double k = Double.parseDouble(tfInput.getText());
-            
-            double c = (double)(k - 273);
-            
-            tfOutput.setText(String.valueOf(c));
-        }
-        
-        if(box1.equals("Kelvin") && box2.equals("Fahrenheit")){
-            double k = Double.parseDouble(tfInput.getText());
-            
-            double f = (double)((k - 273) * 1.8 +32);
-            
-            tfOutput.setText(String.valueOf(f));
-        }
-        
-        if(box1.equals("Kelvin") && box2.equals("Reamur")){
-            double k = Double.parseDouble(tfInput.getText());
-            
-            double r = (double)((k - 273) * (0.8));
-            
-            tfOutput.setText(String.valueOf(r));
-        }
-        
-        if(box1.equals("Kelvin") && box2.equals("Kelvin")){
-            double k = Double.parseDouble(tfInput.getText());
-            
-            tfOutput.setText(String.valueOf(k));
+       //konversi 1 kilometer
+        if(box1.equals("Kilometer") && box2.equals("Kilometer"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            tfOutput.setText(String.valueOf(ambil));
         }
 
-        // dari reamur 
-        if(box1.equals("Reamur") && box2.equals("Celcius")){
-            double r = Double.parseDouble(tfInput.getText());
-            
-            double c = (double)(r * (1.2));
-            
-            tfOutput.setText(String.valueOf(c));
+        else if(box1.equals("Kilometer") && box2.equals("Hektometer"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 10);
+
+            tfOutput.setText(String.valueOf(hasil));
         }
-        
-        if(box1.equals("Reamur") && box2.equals("Fahrenheit")){
-            double r = Double.parseDouble(tfInput.getText());
-            
-            double f = (double)( (r * (1.8)) +32);
-            
-            tfOutput.setText(String.valueOf(f));
+        else if(box1.equals("Kilometer") && box2.equals("Dekameter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 100);
+
+            tfOutput.setText(String.valueOf(hasil));
         }
-        
-        if(box1.equals("Reamur") && box2.equals("Kelvin")){
-            double r = Double.parseDouble(tfInput.getText());
-            
-            double k = (double)((1.2 * r) + 273);
-            
-            tfOutput.setText(String.valueOf(k));
+        else if(box1.equals("Kilometer") && box2.equals("Meter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 1000);
+
+            tfOutput.setText(String.valueOf(hasil));
         }
-        
-        if(box1.equals("Reamur") && box2.equals("Reamur")){
-            double r= Double.parseDouble(tfInput.getText());
-            
-            tfOutput.setText(String.valueOf(r));
+        else if(box1.equals("Kilometer") && box2.equals("Desimeter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 10000);
+
+            tfOutput.setText(String.valueOf(hasil));
         }
-        
+        else if(box1.equals("Kilometer") && box2.equals("Centimeter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 100000 );
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Kilometer") && box2.equals("Milimeter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double) (ambil * 1000000);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Kilometer") && box2.equals("Mile"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double) (ambil * 0.6213711922);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Kilometer") && box2.equals("Feet"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double) (ambil * 3280.839895);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Kilometer") && box2.equals("Inch"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double) (ambil * 39370.07874);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+
+        //konversi 2 hektometer
+        if(box1.equals("Hektometer") && box2.equals("Kilometer"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 0.1);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Hektometer") && box2.equals("Hektometer"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            tfOutput.setText(String.valueOf(ambil));
+        }
+        else if(box1.equals("Hektometer") && box2.equals("Dekameter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 10);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Hektometer") && box2.equals("Meter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 100);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Hektometer") && box2.equals("Desimeter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 1000);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Hektometer") && box2.equals("Centimeter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 10000);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Hektometer") && box2.equals("Milimeter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double) (ambil * 100000);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Hektometer") && box2.equals("Mile"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 0.06213711922);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Hektometer") && box2.equals("Feet"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 328.0839895);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Hektometer") && box2.equals("Inch"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double) (ambil * 3937.007874);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        //konversi 3 dekameter
+        if(box1.equals("Dekameter") && box2.equals("Kilometer"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 0.01);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Dekameter") && box2.equals("Hektometer"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 0.1);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Dekameter") && box2.equals("Dekameter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            tfOutput.setText(String.valueOf(ambil));
+        }
+        else if(box1.equals("Dekameter") && box2.equals("Meter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 10);
+
+            tfOutput.setText(String.valueOf(ambil));
+        }
+        else if(box1.equals("Dekameter") && box2.equals("Desimeter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 100);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Dekameter") && box2.equals("Centimeter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 1000);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Dekameter") && box2.equals("Milimeter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double) (ambil * 10000);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Dekameter") && box2.equals("Mile"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 0.006213711922);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Dekameter") && box2.equals("Feet"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 32.80839895);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Dekameter") && box2.equals("Inch"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double) (ambil * 393.7007874);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        //konversi 4 meter
+        if(box1.equals("Meter") && box2.equals("Kilometer"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 0.001);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Meter") && box2.equals("Hektometer"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 0.01);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Meter") && box2.equals("Dekameter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 0.1);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Meter") && box2.equals("Meter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            tfOutput.setText(String.valueOf(ambil));
+        }
+        else if(box1.equals("Meter") && box2.equals("Desimeter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 10);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Meter") && box2.equals("Centimeter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 100);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Meter") && box2.equals("Milimeter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double) (ambil * 1000);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Meter") && box2.equals("Mile"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 0.0006213711922);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Meter") && box2.equals("Feet"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 3.280839895);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Meter") && box2.equals("Inch"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double) (ambil * 39.37007874);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        //konversi 5 desimeter
+        if(box1.equals("Desimeter") && box2.equals("Kilometer"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 0.0001);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Desimeter") && box2.equals("Hektometer"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 0.001);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Desimeter") && box2.equals("Dekameter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 0.01);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Desimeter") && box2.equals("Meter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 0.1);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Desimeter") && box2.equals("Desimeter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            tfOutput.setText(String.valueOf(ambil));
+        }
+        else if(box1.equals("Desimeter") && box2.equals("Centimeter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 10);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Desimeter") && box2.equals("Milimeter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double) (ambil * 100);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Desimeter") && box2.equals("Mile"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 0.0000621371);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Desimeter") && box2.equals("Feet"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 0.3280839895);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Desimeter") && box2.equals("Inch"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double) (ambil * 3.937007874);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        //konversi 6 centimeter
+        if(box1.equals("Centimeter") && box2.equals("Kilometer"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 0.00001);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Centimeter") && box2.equals("Hektometer"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 0.0001);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Centimeter") && box2.equals("Dekameter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 0.001);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Centimeter") && box2.equals("Meter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 0.01);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Centimeter") && box2.equals("Desimeter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 0.1);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Centimeter") && box2.equals("Centimeter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            tfOutput.setText(String.valueOf(ambil));
+        }
+        else if(box1.equals("Centimeter") && box2.equals("Milimeter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double) (ambil * 10);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Centimeter") && box2.equals("Mile"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 0.0000062137);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Centimeter") && box2.equals("Feet"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 0.032808399);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Centimeter") && box2.equals("Inch"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 0.3937007874);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        //konversi 7 milimeter
+        if(box1.equals("Milimeter") && box2.equals("Kilometer"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 0.000001);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Milimeter") && box2.equals("Hektometer"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 0.00001);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Milimeter") && box2.equals("Dekameter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 0.0001);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Milimeter") && box2.equals("Meter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 0.001);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Milimeter") && box2.equals("Desimeter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 0.01);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Milimeter") && box2.equals("Centimeter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double) (ambil * 0.1);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Milimeter") && box2.equals("Milimeter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            tfOutput.setText(String.valueOf(ambil));
+        }
+        else if(box1.equals("Milimeter") && box2.equals("Mile"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 6.213711922);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Milimeter") && box2.equals("Feet"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 0.0032808399);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Milimeter") && box2.equals("Inch"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 0.0393700787);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        //konversi 8 mile
+        if(box1.equals("Mile") && box2.equals("Kilometer"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 1.609344 );
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Mile") && box2.equals("Hektometer"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 16.09344);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Mile") && box2.equals("Dekameter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 160.9344);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Mile") && box2.equals("Meter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 1609.344);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Mile") && box2.equals("Desimeter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 16093.44);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Mile") && box2.equals("Centimeter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 160934.4 );
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Mile") && box2.equals("Milimeter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double) (ambil * 1609344);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Mile") && box2.equals("Mile"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            tfOutput.setText(String.valueOf(ambil));
+        }
+
+        else if(box1.equals("Mile") && box2.equals("Feet"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double) (ambil * 5280);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Mile") && box2.equals("Inch"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double) (ambil * 63360);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+
+        //konversi 10 feet
+        if(box1.equals("Feet") && box2.equals("Kilometer"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 0.0003048);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Feet") && box2.equals("Hektometer"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 0.003048);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Feet") && box2.equals("Dekameter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 0.03048);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Feet") && box2.equals("Meter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 0.3048);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Feet") && box2.equals("Desimeter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 3.048);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Feet") && box2.equals("Centimeter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 30.48);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Feet") && box2.equals("Milimeter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double) (ambil * 304.8);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Feet") && box2.equals("Mile"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double) (ambil * 0.0001893939);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Feet") && box2.equals("Feet"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            tfOutput.setText(String.valueOf(ambil));
+        }
+        else if(box1.equals("Feet") && box2.equals("Inch"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double) (ambil * 12);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        //konversi 11 inch
+        if(box1.equals("Inch") && box2.equals("Kilometer"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 0.0000254);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Inch") && box2.equals("Hektometer"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 0.000254);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Inch") && box2.equals("Dekameter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 0.00254);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Inch") && box2.equals("Meter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 0.0254);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Inch") && box2.equals("Desimeter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 0.254);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Inch") && box2.equals("Centimeter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double)(ambil * 2.54);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Inch") && box2.equals("Milimeter"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double) (ambil * 25.4);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Inch") && box2.equals("Mile"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double) (ambil * 0.0000157828);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Inch") && box2.equals("Feet"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            double hasil = (double) (ambil * 0.0833333333);
+
+            tfOutput.setText(String.valueOf(hasil));
+        }
+        else if(box1.equals("Inch") && box2.equals("Inch"))
+        {
+            double ambil = Double.parseDouble(tfInput.getText());
+
+            tfOutput.setText(String.valueOf(ambil));
+        }
     }//GEN-LAST:event_konversiActionPerformed
 
     private void tfOutputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfOutputActionPerformed
