@@ -37,7 +37,6 @@ public class lengthConverter extends javax.swing.JFrame {
         tfOutput = new javax.swing.JTextField();
         konversi = new javax.swing.JButton();
         hapus = new javax.swing.JButton();
-        keluar = new javax.swing.JButton();
         label2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -106,14 +105,6 @@ public class lengthConverter extends javax.swing.JFrame {
             }
         });
         getContentPane().add(hapus, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 160, 80, 30));
-
-        keluar.setText("Keluar");
-        keluar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                keluarActionPerformed(evt);
-            }
-        });
-        getContentPane().add(keluar, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 300, 80, 30));
 
         label2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lengthConverter/background.png"))); // NOI18N
         getContentPane().add(label2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 370));
@@ -961,11 +952,6 @@ public class lengthConverter extends javax.swing.JFrame {
         tfOutput.setText("");
     }//GEN-LAST:event_hapusActionPerformed
 
-    private void keluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_keluarActionPerformed
-        // TODO add your handling code here:
-        System.exit(0);
-    }//GEN-LAST:event_keluarActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -1007,7 +993,6 @@ public class lengthConverter extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cbOutput;
     private javax.swing.JButton hapus;
     private javax.swing.JLabel judul;
-    private javax.swing.JButton keluar;
     private javax.swing.JButton konversi;
     private javax.swing.JLabel label2;
     private javax.swing.JPanel panel;
